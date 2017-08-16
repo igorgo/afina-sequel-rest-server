@@ -1,0 +1,5 @@
+{
+  "port": 16161,
+  "format": "xml",
+  "slowTime": "10s"
+}

@@ -1,0 +1,6 @@
+{
+  "writeInterval" : "3s",
+  "bufferSizeKB" : 64,
+  "keepDays": 100,
+  "stdout": ["error", "debug", "warning", "server"]
+}

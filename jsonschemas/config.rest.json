@@ -1,0 +1,31 @@
+{
+  "title": "afina sequel rest config schema",
+  "type": "object",
+  "definitions": {
+    "formats": {
+      "type": "string",
+      "enum": [
+        "json",
+        "xml"
+      ]
+    }
+  },
+  "properties": {
+    "port": {
+      "type": "number"
+    },
+    "format": {
+      "$ref": "#/definitions/formats"
+    },
+    "slowTime": {
+      "port": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "port",
+    "format",
+    "slowTime"
+  ]
+}

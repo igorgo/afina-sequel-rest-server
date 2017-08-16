@@ -1,0 +1,24 @@
+{
+  "name": "afina-sequel-rest-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "concolor": "^0.1.5",
+    "cookie-parser": "^1.4.3",
+    "jsonschema": "^1.1.1",
+    "jsontoxml": "0.0.11",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "on-finished": "^2.3.0",
+    "on-headers": "^1.0.1",
+    "oracle12db-win64": "http://guest:guest@pmo.parus.ua/svn/oracledb-12win64/oracle12db-win64.tgz",
+    "restify": "^5.1.0"
+  }
+}

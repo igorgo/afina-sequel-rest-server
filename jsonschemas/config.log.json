@@ -1,0 +1,24 @@
+{
+  "title": "afina sequel log config schema",
+  "type": "object",
+  "properties": {
+    "writeInterval": {
+      "type": "string"
+    },
+    "bufferSizeKB" : {
+      "type": "number"
+    },
+    "keepDays" : {
+      "type": "number"
+    },
+    "stdout": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "writeInterval",
+    "bufferSizeKB",
+    "keepDays",
+    "stdout"
+  ]
+}

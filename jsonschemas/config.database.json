@@ -1,0 +1,24 @@
+{
+  "title": "database config schema",
+  "type": "object",
+  "properties": {
+    "alias": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "alias",
+    "username",
+    "password",
+    "schema"
+  ]
+}

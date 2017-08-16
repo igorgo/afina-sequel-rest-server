@@ -1,0 +1,40 @@
+{
+  "title": "afina sequel auth config schema",
+  "type": "object",
+  "definitions": {
+    "languageDef": {
+      "type": "string",
+      "enum": [
+        "RUSSIAN",
+        "UKRAINIAN"
+      ]
+    }
+  },
+  "properties": {
+    "company": {
+      "type": "string"
+    },
+    "appcode": {
+      "type": "string"
+    },
+    "language": {"$ref": "#/definitions/languageDef"},
+    "oldVersion": {
+      "type": "boolean"
+    },
+    "enablePublicSession": {
+      "type": "boolean"
+    },
+    "pubUser": {
+      "type": "string"
+    },
+    "pubPassword": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "oldVersion",
+    "enablePublicSession",
+    "language"
+  ],
+  "additionalProperties": false
+}
