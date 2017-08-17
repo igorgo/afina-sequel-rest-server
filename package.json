@@ -1,13 +1,18 @@
 {
   "name": "afina-sequel-rest-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.1",
+  "description": "Afina Sequel Rest Server",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "url": "git+https://github.com/igorgo/afina-sequel-rest-server.git",
+    "type": "git"
+  },
+  "author": "Igor Gorodetskyy",
+  "license": "LicenseRef-LICENSE",
   "dependencies": {
     "body-parser": "^1.17.2",
     "concolor": "^0.1.5",

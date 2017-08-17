@@ -1,20 +1,14 @@
 'use strict'
 
-api.rest.get('/hello/:name', (req, res, next) => {
-  res.send('hello ' + req.params.name)
-  next()
-})
-
-
 let nCurrencyVersion = null
 
-const ncompany = api.db.pubSessionInfo.ncompany
+const nCompany = api.db.pubSessionInfo.nCompany
 
 const getCurrencyVersion = async () => {
   const sql =
     'begin PARUS.FIND_VERSION_BY_COMPANY(NCOMPANY => :NCOMPANY, SUNITCODE => :SUNITCODE, NVERSION => :NVERSION); end;'
   const params = api.db.createParams()
-  params.add('NCOMPANY').dirIn().typeNumber().val(ncompany)
+  params.add('NCOMPANY').dirIn().typeNumber().val(nCompany)
   params.add('SUNITCODE').dirIn().typeString().val('CURNAMES')
   params.add('NVERSION').dirOut().typeNumber()
   nCurrencyVersion = (await api.db.executePub(sql, params)).outBinds['NVERSION']
@@ -44,10 +38,10 @@ select C.rn,
  order by CURCODE`
   api.rest.sendOraResults(await api.db.executePub(sql, [nCurrencyVersion]), req, res)
   next()
-}
-)
+})
 
 api.rest.post('/pub/currency', (req, res, next) => {
+  afs.log.debug(req.contentType())
   afs.log.debug(req.params)
   res.end('OK')
   next()
