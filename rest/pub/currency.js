@@ -14,7 +14,6 @@ const getCurrencyVersion = async () => {
   nCurrencyVersion = (await api.db.executePub(sql, params)).outBinds['NVERSION']
 }
 
-
 api.rest.get('/pub/currency', async (req, res, next) => {
   if (!nCurrencyVersion) await getCurrencyVersion()
   const sql = `
@@ -40,9 +39,3 @@ select C.rn,
   next()
 })
 
-api.rest.post('/pub/currency', (req, res, next) => {
-  afs.log.debug(req.contentType())
-  afs.log.debug(req.params)
-  res.end('OK')
-  next()
-})

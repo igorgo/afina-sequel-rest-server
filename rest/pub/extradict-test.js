@@ -118,11 +118,13 @@ const updateHandler = async (req, res, next) => {
          raise;
      end;`
   const params = api.db.createParams()
+  afs.log.debug(req.params)
   params.add('NCOMPANY').dirIn().typeNumber().val(nCompany)
   params.add('NRN').dirIn().typeNumber().nVal(api._.get(req, 'params.rn'))
   params.add('NPRN').dirIn().typeNumber().val(nExtraDictRn)
   params.add('SCODE').dirIn().typeString().val(api._.get(req, 'params.code'))
   params.add('SNAME').dirIn().typeString().val(api._.get(req, 'params.name'))
+  afs.log.debug(params)
   api.rest.sendOraResults(await api.db.executePub(sql, params), req, res)
   next()
 }
